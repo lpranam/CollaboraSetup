@@ -4,7 +4,7 @@ apt upgrade
 apt autoremove
 apt install -y dialog
 apt-get -y install git build-essential zip ccache junit4 libkrb5-dev nasm graphviz python3 python3-dev qtbase5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5config-dev libkf5windowsystem-dev libkf5kio-dev libqt5x11extras5-dev autoconf libcups2-dev libfontconfig1-dev gperf openjdk-17-jdk doxygen libxslt1-dev xsltproc libxml2-utils libxrandr-dev libx11-dev bison flex libgtk-3-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev ant ant-optional libnss3-dev libavahi-client-dev libxt-dev
-apt install -y libpoco-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget git build-essential libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd install pulseaudio-utils docker.io
+apt install -y libpoco-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget git build-essential libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd pulseaudio-utils docker.io
 current_dir=$(pwd)
 mkdir -p ~/work/collabora
 cp images/jarvis_wallpaper.jpg images/collabora_wallpaper.jpg /usr/share/wallpapers/
