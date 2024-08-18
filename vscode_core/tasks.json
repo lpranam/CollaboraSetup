@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "(make && notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Complete\" && paplay /usr/share/sounds/build_complete.ogg) || (notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Failed\" && paplay /usr/share/sounds/build_failed.ogg)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "run",
+            "command": "instdir/program/soffice",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

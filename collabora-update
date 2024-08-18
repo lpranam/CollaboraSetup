@@ -1,0 +1,79 @@
+result=$'\n'
+
+#update libreoffice 2024
+echo "################################################"
+echo "              libreoffice_2024                 "
+echo "################################################"
+cd /home/lpranam/work/collabora/libreoffice_2024/
+brach=$(git branch --show-current)
+
+if [ "$brach" = "distro/collabora/co-24.04" ]; then
+    git pull -r
+    make
+else
+    result+=$'Libreoffice 2024 is not updated\n'
+fi
+
+#update online master
+echo "################################################"
+echo "                online_master                   "
+echo "################################################"
+cd /home/lpranam/work/collabora/online_master/
+brach=$(git branch --show-current)
+
+if [ "$brach" = "master" ]; then
+    git fetch upstream
+    git merge upstream/master
+    make -j
+else
+    result+=$'Online Master is not updated\n'
+fi
+
+#update libreoffice 2023
+echo "################################################"
+echo "              libreoffice_2023                  "
+echo "################################################"
+cd /home/lpranam/work/collabora/libreoffice_2023/
+brach=$(git branch --show-current)
+
+if [ "$brach" = "distro/collabora/co-23.05" ]; then
+    git pull -r
+    make
+else
+    result+=$'Libreoffice 2023 is not updated\n'
+fi
+
+#update online master
+echo "################################################"
+echo "                 online_2023                    "
+echo "################################################"
+cd /home/lpranam/work/collabora/online_2023/
+brach=$(git branch --show-current)
+
+if [ "$brach" = "distro/collabora/co-23.05" ]; then
+    git fetch upstream
+    git merge upstream/distro/collabora/co-23.05
+    make -j
+else
+    result+=$'Online 2023 is not updated\n'
+fi
+
+#update libreoffice master
+echo "################################################"
+echo "              libreoffice_master                "
+echo "################################################"
+cd /home/lpranam/work/collabora/libreoffice_master/
+brach=$(git branch --show-current)
+
+if [ "$brach" = "master" ]; then
+    git pull -r
+    make
+else
+    result+=$'Libreoffice master is not updated\n'
+fi
+
+
+
+echo -n "$result"
+
+notify-send --app-name=Collabora --icon="/usr/share/notificationhelper/collabora-symbol.png" "Build Complete" && paplay /usr/share/sounds/build_complete.ogg
