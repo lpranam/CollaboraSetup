@@ -76,4 +76,4 @@ fi
 
 echo -n "$result"
 
-notify-send --app-name=Collabora --icon="/usr/share/notificationhelper/collabora-symbol.png" "Build Complete" && paplay /usr/share/sounds/build_complete.ogg
+notify-send --app-name=Collabora --icon="/usr/share/notificationhelper/collabora_symbol.png" "Build Complete" && paplay /usr/share/sounds/build_complete.ogg
