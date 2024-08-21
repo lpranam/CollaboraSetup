@@ -35,12 +35,12 @@ git clone "https://git.libreoffice.org/core" libreoffice_master && cd "libreoffi
 cp $current_dir/vscode_core/* .vscode
 
 cd ~/work/collabora && \
-git clone https://github.com/lpranam/online.git online_master && cd online_master && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=/home/lpranam/work/collabora/libreoffice_2024/include --with-lo-path=/home/lpranam/work/collabora/libreoffice_2024/instdir --with-logfile=/tmp/coolwsd_master.log && \
+git clone https://github.com/lpranam/online.git online_master && cd online_master && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=~/work/collabora/libreoffice_2024/include --with-lo-path=~/work/collabora/libreoffice_2024/instdir --with-logfile=/tmp/coolwsd_master.log && \
 cp -R $current_dir/vscode_online .vscode
 
 
 cd ~/work/collabora && \
-git clone -b distro/collabora/co-23.05 https://github.com/lpranam/online.git online_2023 && cd online_2023 && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=/home/lpranam/work/collabora/libreoffice_2023/include --with-lo-path=/home/lpranam/work/collabora/libreoffice_2023/instdir --with-logfile=/tmp/coolwsd_2023.log && \
+git clone -b distro/collabora/co-23.05 https://github.com/lpranam/online.git online_2023 && cd online_2023 && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=~/work/collabora/libreoffice_2023/include --with-lo-path=~/work/collabora/libreoffice_2023/instdir --with-logfile=/tmp/coolwsd_2023.log && \
 cp -R $current_dir/vscode_online .vscode && \
 sed -i -e 's/libreoffice_2024/libreoffice_2023/g' .vscode/c_cpp_properties.json
 
