@@ -12,6 +12,13 @@ sudo cp sounds/build_failed.ogg sounds/build_complete.ogg /usr/share/sounds/
 sudo cp collabora-update /usr/local/bin/
 sudo chmod 777 /usr/local/bin/collabora-update
 
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker pull nextcloud
+docker run -d -p 80:80 --name cloud nextcloud
+docker stop cloud
+
 ccache --max-size 32G
 echo "export CCACHE_COMPRESS=1" >>  ~/.bashrc
 echo "add-auto-load-safe-path /" >> ~/.gdbinit
