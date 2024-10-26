@@ -30,15 +30,15 @@ current_dir=$(pwd)
 mkdir -p ~/work/collabora
 
 cd ~/work/collabora && \
-git clone -b distro/collabora/co-24.04 "https://git.libreoffice.org/core" libreoffice_2024 && cd "libreoffice_2024" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-debug --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
+git clone -b distro/collabora/co-24.04 "https://git.libreoffice.org/core" libreoffice_2024 && cd "libreoffice_2024" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-dbgutil --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
 cp $current_dir/vscode_core/* .vscode
 
 cd ~/work/collabora && \
-git clone -b distro/collabora/co-23.05 "https://git.libreoffice.org/core" libreoffice_2023 && cd "libreoffice_2023" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-debug --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
+git clone -b distro/collabora/co-23.05 "https://git.libreoffice.org/core" libreoffice_2023 && cd "libreoffice_2023" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-dbgutil --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
 cp $current_dir/vscode_core/* .vscode/
 
 cd ~/work/collabora && \
-git clone "https://git.libreoffice.org/core" libreoffice_master && cd "libreoffice_master" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-debug --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
+git clone "https://git.libreoffice.org/core" libreoffice_master && cd "libreoffice_master" && (mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.libreoffice.org/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg) && ./autogen.sh --enable-dbgutil --enable-python=internal --with-lang=ALL --enable-werror --without-system-nss && \
 cp $current_dir/vscode_core/* .vscode
 
 cd ~/work/collabora && \
