@@ -25,6 +25,7 @@ echo "add-auto-load-safe-path /" >> ~/.gdbinit
 echo "add-auto-load-safe-path /" | sudo tee /etc/gdb/gdbinit
 git config --global user.name 'Pranam Lashkari'
 git config --global user.email 'lpranam@collabora.com'
+git config --global grep.lineNumber true
 
 current_dir=$(pwd)
 mkdir -p ~/work/collabora
