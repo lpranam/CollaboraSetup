@@ -8,25 +8,25 @@
             "type": "chrome",
             "request": "launch",
             "name": "Writer",
-            "url": "http://localhost:9980/browser/d10e7f547/debug.html?file_path=${workspaceFolder}/test/samples/writer-edit.fodt"
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/samples/writer-edit.fodt"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Calc",
-            "url": "http://localhost:9980/browser/d10e7f547/debug.html?file_path=${workspaceFolder}/test/samples/calc-edit.ods"
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/samples/calc-edit.ods"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Impress",
-            "url": "http://localhost:9980/browser/d10e7f547/debug.html?file_path=${workspaceFolder}/test/samples/impress-edit.fodp"
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/samples/impress-edit.fodp"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Draw",
-            "url": "http://localhost:9980/browser/d10e7f547/debug.html?file_path=${workspaceFolder}/test/samples/draw-edit.odg"
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/samples/draw-edit.odg"
         },
         {
             "type": "chrome",
@@ -38,7 +38,7 @@
             "name": "kit",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceFolder}/coolforkit",
+            "program": "${workspaceFolder}/coolforkit-caps",
             "processId": "${command:pickProcess}",
             "MIMode": "gdb",
             "setupCommands": [
@@ -101,7 +101,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Writer (Firefox)",
-            "url": "http://localhost:9980/browser/c2e3a8300/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odt",
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odt",
             "webRoot": "${workspaceFolder}/browser/",
             "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/",
             "pathMappings": [
@@ -116,7 +116,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Calc (Firefox)",
-            "url": "http://localhost:9980/browser/c2e3a8300/debug.html?file_path=${workspaceFolder}/test/data/hello-world.ods",
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/data/hello-world.ods",
             "webRoot": "${workspaceFolder}/browser/",
             "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
         },
@@ -125,7 +125,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Impress (Firefox)",
-            "url": "http://localhost:9980/browser/c2e3a8300/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odp",
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odp",
             "webRoot": "${workspaceFolder}/browser/",
             "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
         },
@@ -134,7 +134,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Draw (Firefox)",
-            "url": "http://localhost:9980/browser/c2e3a8300/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odg",
+            "url": "http://localhost:9980/browser/a1518997b7/debug.html?file_path=${workspaceFolder}/test/data/hello-world.odg",
             "webRoot": "${workspaceFolder}/browser/",
             "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
         },
