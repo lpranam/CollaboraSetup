@@ -7,5 +7,5 @@ cp $current_dir/vscode_core/* .vscode && make
 
 #online 24
 cd ~/work/collabora && \
-git clone -b distro/collabora/co-24.04 https://github.com/lpranam/online.git online_2024 && cd online_2024 && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=$HOME/work/collabora/libreoffice_2024/include --with-lo-path=$HOME/work/collabora/libreoffice_2024/instdir --with-logfile=/tmp/coolwsd_master.log && \
+git clone -b distro/collabora/co-24.04 https://github.com/lpranam/online.git online_2024 && cd online_2024 && git remote add upstream https://github.com/CollaboraOnline/online.git && ./autogen.sh && ./configure --enable-debug --enable-silent-rules --enable-cypress --disable-ssl --enable-feature-lock --enable-feature-restriction --disable-werror --with-lokit-path=$HOME/work/collabora/libreoffice_2024/include --with-lo-path=$HOME/work/collabora/libreoffice_2024/instdir --with-logfile=/tmp/coolwsd_2025.log && \
 cp -R $current_dir/vscode_online .vscode
