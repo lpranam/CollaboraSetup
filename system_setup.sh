@@ -4,7 +4,7 @@ sudo apt update
 sudo apt upgrade
 sudo apt autoremove
 sudo apt install -y dialog
-sudo apt -y install git build-essential zip ccache junit4 libkrb5-dev nasm graphviz python3 python3-dev qtbase5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5config-dev libkf5windowsystem-dev libkf5kio-dev libqt5x11extras5-dev autoconf libcups2-dev libfontconfig1-dev gperf openjdk-17-jdk doxygen libxslt1-dev xsltproc libxml2-utils libxrandr-dev libx11-dev bison flex libgtk-3-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev ant ant-optional libnss3-dev libavahi-client-dev libxt-dev curl clang-format libpq-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd pulseaudio-utils docker.io libgif-dev podman python3-setuptools meson g++ make libssl-dev openssl kdeconnect
+sudo apt -y install git build-essential zip ccache junit4 libkrb5-dev nasm graphviz python3 python3-dev qtbase5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5config-dev libkf5windowsystem-dev libkf5kio-dev libqt5x11extras5-dev autoconf libcups2-dev libfontconfig1-dev gperf openjdk-17-jdk doxygen libxslt1-dev xsltproc libxml2-utils libxrandr-dev libx11-dev bison flex libgtk-3-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev ant ant-optional libnss3-dev libavahi-client-dev libxt-dev curl clang-format libpq-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd pulseaudio-utils docker.io libgif-dev podman python3-setuptools meson g++ make libssl-dev openssl kdeconnect cmake
 
 sudo cp images/jarvis_wallpaper.jpg images/collabora_wallpaper.jpg images/left.jpg images/right.jpg /usr/share/wallpapers/
 sudo mkdir /usr/share/notificationhelper
@@ -33,7 +33,8 @@ mkdir -p ~/work/collabora
 # build poco
 cd ~/work/collabora
 git clone -b poco-1.12.5p2-release https://github.com/pocoproject/poco.git
-./configure
-make -j
-sudo make install
-
+cd poco
+mkdir cmake-build
+cd cmake-build
+cmake .. && cmake --build .
+sudo cmake --build . --target install
