@@ -45,7 +45,7 @@ fi
 
 #update online master
 echo "################################################"
-echo "                online_master                   "
+echo "                 online_2024                    "
 echo "################################################"
 cd /home/lpranam/work/collabora/online_master/
 brach=$(git branch --show-current)
