@@ -43,11 +43,11 @@ else
     result+=$'Libreoffice 2024 is not updated\n'
 fi
 
-#update online master
+#update online 2024
 echo "################################################"
 echo "                 online_2024                    "
 echo "################################################"
-cd /home/lpranam/work/collabora/online_master/
+cd /home/lpranam/work/collabora/online_2024/
 brach=$(git branch --show-current)
 
 if [ "$brach" = "distro/collabora/co-24.04" ]; then
