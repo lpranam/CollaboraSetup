@@ -21,9 +21,9 @@ echo "################################################"
 cd /home/lpranam/work/collabora/online_2025/
 brach=$(git branch --show-current)
 
-if [ "$brach" = "master" ]; then
+if [ "$brach" = "main" ]; then
     git fetch upstream
-    git merge upstream/master
+    git merge upstream/main
     make -j
 else
     result+=$'Online 2025 is not updated\n'
