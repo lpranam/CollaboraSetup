@@ -1,6 +1,7 @@
 {
-    "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.scrollback": 10000,
+    "workbench.colorTheme": "Dark Modern",
+    "chat.disableAIFeatures": true,
     "files.trimTrailingWhitespace": true,
-    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.stickyScroll.enabled": false
 }

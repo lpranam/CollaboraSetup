@@ -1,0 +1,71 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Online",
+            "command": "(make -j && notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Complete\" && paplay /usr/share/sounds/build_complete.ogg) || (notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Failed\" && paplay /usr/share/sounds/build_failed.ogg)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "focus": true,
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Office",
+            "type": "shell",
+            "command": "cd engine && (make && notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Complete\" && paplay /usr/share/sounds/build_complete.ogg) || (notify-send --app-name=Collabora --icon=\"/usr/share/notificationhelper/collabora_symbol.png\" \"Build Failed\" && paplay /usr/share/sounds/build_failed.ogg)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "Run Online",
+            "command": "make",
+            "args": [
+                "-j",
+                "run",
+                "build-nocheck"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "focus": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Run Office",
+            "command": "engine/instdir/program/soffice",
+            "options": {
+                "cwd": "${workspaceFolder}/engine"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

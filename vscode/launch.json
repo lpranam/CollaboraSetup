@@ -1,0 +1,241 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Writer",
+            "url": "https://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/writer-edit.fodt"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Calc",
+            "url": "https://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/calc-edit.fods"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Impress",
+            "url": "https://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/impress-edit.fodp"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Draw",
+            "url": "https://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/draw-edit.odg"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Nextcloud",
+            "url": "https://localhost/apps/files/files"
+        },
+        {
+            "name": "kit",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/coolforkit-caps",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerArgs": "-iex \"set sysroot /\""
+        },
+        {
+            "name": "COOLWSD attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/coolwsd",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerArgs": "-iex \"set sysroot /\""
+        },
+        // {
+        //     "name": "coolwsd launch",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "${workspaceFolder}/loolwsd",
+        //     "args": [
+        //         "--o:security.capabilities=\"false\"",
+        //         "--o:sys_template_path=\"${workspaceFolder}/systemplate\"",
+        //         "--o:child_root_path=\"${workspaceFolder}/jails\"",
+        //         "--o:storage.filesystem[@allow]=true",
+        //         "--o:ssl.cert_file_path=\"${workspaceFolder}/etc/cert.pem\"",
+        //         "--o:ssl.key_file_path=\"${workspaceFolder}/etc/key.pem\"",
+        //         "--o:ssl.ca_file_path=\"${workspaceFolder}/etc/ca-chain.cert.pem\"",
+        //         "--o:admin_console.username=admin",
+        //         "--o:admin_console.password=admin",
+        //         "--o:logging.file[@enable]=false",
+        //         "--o:logging.level=error"
+        //     ],
+        //     "cwd": "${workspaceFolder}",
+        //     "stopAtEntry": true,
+        //     "MIMode": "gdb",
+        //     "setupCommands": [
+        //         {
+        //             "description": "Enable pretty-printing for gdb",
+        //             "text": "-enable-pretty-printing",
+        //             "ignoreFailures": true
+        //         }
+        //     ],
+        //     "miDebuggerArgs": "-iex \"set sysroot /\""
+        // },
+        {
+            "name": "Office",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/engine/instdir/program/soffice.bin",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Writer Office",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/engine/instdir/program/soffice.bin",
+            "args": ["--writer"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Calc Office",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/engine/instdir/program/soffice.bin",
+            "args": ["--calc"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Impress Office",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/engine/instdir/program/soffice.bin",
+            "args": ["--impress"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Office Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/engine/instdir/program/soffice.bin",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+        // {
+        //     "type": "firefox",
+        //     "request": "launch",
+        //     "reAttach": true,
+        //     "name": "Writer (Firefox)",
+        //     "url": "http://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/writer-edit.fodt",
+        //     "webRoot": "${workspaceFolder}/browser/",
+        //     "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/",
+        //     "pathMappings": [
+        //         {
+        //             "url": "http://localhost:9980/browser/src",
+        //             "path": "${workspaceFolder}/browser/src"
+        //         }
+        //     ]
+        // },
+        // {
+        //     "type": "firefox",
+        //     "request": "launch",
+        //     "reAttach": true,
+        //     "name": "Calc (Firefox)",
+        //     "url": "http://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/calc-edit.fods",
+        //     "webRoot": "${workspaceFolder}/browser/",
+        //     "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
+        // },
+        // {
+        //     "type": "firefox",
+        //     "request": "launch",
+        //     "reAttach": true,
+        //     "name": "Impress (Firefox)",
+        //     "url": "http://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/impress-edit.fodp",
+        //     "webRoot": "${workspaceFolder}/browser/",
+        //     "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
+        // },
+        // {
+        //     "type": "firefox",
+        //     "request": "launch",
+        //     "reAttach": true,
+        //     "name": "Draw (Firefox)",
+        //     "url": "http://localhost:9980/browser/5bec82ff13/debug.html?file_path=${workspaceFolder}/test/samples/draw-edit.odg",
+        //     "webRoot": "${workspaceFolder}/browser/",
+        //     "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
+        // },
+        // {
+        //     "type": "firefox",
+        //     "request": "launch",
+        //     "reAttach": true,
+        //     "name": "Nextcloud (Firefox)",
+        //     "url": "http://localhost/apps/dashboard/",
+        //     "webRoot": "${workspaceFolder}/browser/",
+        //     "tmpDir": "${workspaceFolder}/.vscode/firefox-tmp/"
+        // }
+    ]
+}

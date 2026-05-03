@@ -1,0 +1,58 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/local/include",
+                "/usr/include/x86_64-linux-gnu",
+                "/usr/include",
+                "${workspaceFolder}/",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/engine/**",
+                "${workspaceFolder}/common",
+                "${workspaceFolder}/engine",
+                "${workspaceFolder}/engine/include",
+                "${workspaceFolder}/engine/sc/inc",
+                "${workspaceFolder}/engine/sd/inc",
+                "${workspaceFolder}/engine/sc/source",
+                "${workspaceFolder}/engine/sc/source/ui/inc",
+                "${workspaceFolder}/engine/include/salhelper",
+                "${workspaceFolder}/engine/config_host",
+                "${workspaceFolder}/engine/svx/inc",
+                "${workspaceFolder}/engine/vcl/inc",
+                "${workspaceFolder}/engine/sw/inc",
+                "${workspaceFolder}/engine/desktop/inc",
+                "${workspaceFolder}/engine/dbaccess/source/ui/inc",
+                "${workspaceFolder}/engine/reportdesign/source/ui/inc",
+                "${workspaceFolder}/engine/sfx2/source/inc",
+                "${workspaceFolder}/engine/sd/source/ui/inc",
+                "${workspaceFolder}/engine/sdext/source/pdfimport/inc",
+                "${workspaceFolder}/engine/sw/source/uibase/inc",
+                "${workspaceFolder}/engine/workdir/UnoApiHeadersTarget/offapi/comprehensive",
+                "${workspaceFolder}/engine/workdir/UnoApiHeadersTarget/udkapi/comprehensive"
+            ],
+            "defines": [
+                "BOOST_ERROR_CODE_HEADER_ONLY",
+                "BOOST_SYSTEM_NO_DEPRECATED",
+                "CPPU_ENV=gcc3",
+                "DBG_UTIL",
+                "LINUX",
+                "OSL_DEBUG_LEVEL=1",
+                "SAL_LOG_INFO",
+                "SAL_LOG_WARN",
+                "UNIX",
+                "UNX",
+                "X86_64",
+                "_DEBUG",
+                "_GLIBCXX_DEBUG",
+                "_PTHREADS",
+                "_REENTRANT",
+                "CPPUNIT_PLUGIN_EXPORT='extern \"C\" SAL_DLLPUBLIC_EXPORT'",
+                "SYSTEM_LIBXML",
+                "EXCEPTIONS_ON",
+                "LIBO_INTERNAL_ONLY"
+            ]
+        }
+    ],
+    "version": 4
+}

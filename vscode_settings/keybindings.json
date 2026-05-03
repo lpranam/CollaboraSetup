@@ -1,14 +1,14 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+c",
         "command": "workbench.action.terminal.copySelection",
-        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+        "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
     },
     {
         "key": "ctrl+shift+c",
         "command": "-workbench.action.terminal.copySelection",
-        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+        "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
     },
     {
         "key": "ctrl+v",
@@ -22,19 +22,26 @@
     },
     {
         "key": "ctrl+b",
-        "command": "workbench.action.tasks.build"
+        "command": "workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
     },
     {
         "key": "ctrl+shift+b",
-        "command": "-workbench.action.tasks.build"
+        "command": "-workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.tasks.runTask"
     },
     {
         "key": "ctrl+r",
         "command": "workbench.action.tasks.runTask",
-        "args": "run"
+        "args": "Run Online"
     },
     {
-        "key": "ctrl+u ctrl+u",
-        "command": "editor.action.transformToUppercase"
-    }
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Office"
+    },
 ]
