@@ -4,7 +4,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt autoremove
 sudo apt install -y dialog
-sudo apt -y install git build-essential zip ccache junit4 libkrb5-dev nasm graphviz python3 python3-dev qtbase5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5config-dev libkf5windowsystem-dev libkf5kio-dev libqt5x11extras5-dev autoconf libcups2-dev libfontconfig1-dev gperf openjdk-17-jdk doxygen libxslt1-dev xsltproc libxml2-utils libxrandr-dev libx11-dev bison flex libgtk-3-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev ant ant-optional libnss3-dev libavahi-client-dev libxt-dev curl clang-format libpq-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd pulseaudio-utils docker.io libgif-dev podman python3-setuptools meson g++ make libssl-dev openssl kdeconnect cmake
+sudo apt -y install git build-essential gdb zip ccache junit4 libkrb5-dev nasm graphviz python3 python3-dev qtbase5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5config-dev libkf5windowsystem-dev libkf5kio-dev libqt5x11extras5-dev autoconf libcups2-dev libfontconfig1-dev gperf openjdk-17-jdk doxygen libxslt1-dev xsltproc libxml2-utils libxrandr-dev libx11-dev bison flex libgtk-3-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev ant ant-optional libnss3-dev libavahi-client-dev libxt-dev curl clang-format libpq-dev python3-polib libcap-dev npm libpam-dev libzstd-dev wget libtool libcap2-bin python3-lxml libpng-dev libcppunit-dev pkg-config fontconfig snapd pulseaudio-utils docker.io libgif-dev python3-setuptools meson g++ make libssl-dev openssl kdeconnect cmake gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav qml6-module-qtlocation qt6-location-plugins
+
 
 sudo cp images/jarvis_wallpaper.jpg images/collabora_wallpaper.jpg images/left.jpg images/right.jpg /usr/share/wallpapers/
 sudo mkdir /usr/share/notificationhelper
@@ -24,17 +25,16 @@ git config --global grep.lineNumber true
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-docker pull nextcloud
-docker run -d -p 80:80 --name cloud nextcloud
-docker stop cloud
+# docker pull nextcloud
+# docker run -d -p 80:80 --name cloud nextcloud
+# docker stop cloud
 
-mkdir -p ~/work/collabora
+mkdir -p ~/work
 
 # build poco
-cd ~/work/collabora
+cd ~/work/
 git clone -b poco-1.12.5p2-release https://github.com/pocoproject/poco.git
 cd poco
-mkdir cmake-build
-cd cmake-build
-cmake .. && cmake --build .
-sudo cmake --build . --target install
+./configure
+make SANITIZEFLAGS="-DPOCO_COMPILER_CLANG -Wno-template-body"
+sudo make install
