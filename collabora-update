@@ -1,78 +1,21 @@
 result=$'\n'
 
-#update libreoffice 2025
+#update Online Mono Repo
 echo "################################################"
-echo "              libreoffice_2025                  "
+echo "                Online Mono Repo                "
 echo "################################################"
-cd /home/lpranam/work/collabora/libreoffice_2025/
-brach=$(git branch --show-current)
-
-if [ "$brach" = "distro/collabora/co-25.04" ]; then
-    git pull -r
-    make
-else
-    result+=$'Libreoffice 2025 is not updated\n'
-fi
-
-#update online 2025
-echo "################################################"
-echo "                 online_2025                    "
-echo "################################################"
-cd /home/lpranam/work/collabora/online_2025/
+cd /home/lpranam/work/collabora/jail/repos/online_main/
 brach=$(git branch --show-current)
 
 if [ "$brach" = "main" ]; then
-    git fetch upstream
-    git merge upstream/main
+    git pull -r
+    cd /home/lpranam/work/collabora/jail/repos/online_main/engine
+    make
+    cd /home/lpranam/work/collabora/jail/repos/online_main/
     make -j
 else
-    result+=$'Online 2025 is not updated\n'
+    result+=$'Online Mono Repo is not updated\n'
 fi
-
-#update libreoffice 2024
-echo "################################################"
-echo "              libreoffice_2024                 "
-echo "################################################"
-cd /home/lpranam/work/collabora/libreoffice_2024/
-brach=$(git branch --show-current)
-
-if [ "$brach" = "distro/collabora/co-24.04" ]; then
-    git pull -r
-    make
-else
-    result+=$'Libreoffice 2024 is not updated\n'
-fi
-
-#update online 2024
-echo "################################################"
-echo "                 online_2024                    "
-echo "################################################"
-cd /home/lpranam/work/collabora/online_2024/
-brach=$(git branch --show-current)
-
-if [ "$brach" = "distro/collabora/co-24.04" ]; then
-    git fetch upstream
-    git merge upstream/distro/collabora/co-24.04
-    make -j
-else
-    result+=$'Online 2024 is not updated\n'
-fi
-
-
-#update libreoffice master
-echo "################################################"
-echo "              libreoffice_master                "
-echo "################################################"
-cd /home/lpranam/work/collabora/libreoffice_master/
-brach=$(git branch --show-current)
-
-if [ "$brach" = "master" ]; then
-    git pull -r
-    make
-else
-    result+=$'Libreoffice master is not updated\n'
-fi
-
 
 
 echo -n "$result"
